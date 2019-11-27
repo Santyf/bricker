@@ -14,7 +14,6 @@ connection.connect(function (err) {
 });
 function listItems() {
     connection.query("SELECT * FROM Products", function (err, res) {
-        console.log(res);
         if (err) throw err;
         res.forEach(data => {
             console.log("Item ID: " + data.item_id + " | " + data.product_name + " | " + data.department_name + " | " + data.price + " | " + data.stock_quantity);
